@@ -1,0 +1,323 @@
+{
+    // Prettier
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[prisma]": {
+        "editor.defaultFormatter": "Prisma.prisma"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    //Code Spell
+    "cSpell.enableFiletypes": [
+        "!asciidoc",
+        "!c",
+        "!cpp",
+        "!csharp",
+        "!go",
+        "!handlebars",
+        "!haskell",
+        "!jade",
+        "!java",
+        "!latex",
+        "!php",
+        "!pug",
+        "!python",
+        "!restructuredtext",
+        "!rust",
+        "!scala",
+        "!scss"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.addMissingImports": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    // Editor
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.fontWeight": "400",
+    "editor.lineHeight": 22,
+    "editor.lineNumbers": "relative",
+    "editor.linkedEditing": true,
+    "editor.minimap.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "editor.suggest.insertMode": "replace",
+    //Eslint
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "graphql"
+    ],
+    "explorer.compactFolders": false,
+    // Explorer
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.fileNesting.enabled": true,
+    // Extension
+    "extensions.autoUpdate": "onlyEnabledExtensions",
+    "extensions.ignoreRecommendations": true,
+    //Files
+    "files.exclude": {
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.hg": true,
+        "**/.svn": true,
+        "**/CVS": true,
+        ".vscode": true
+        // "node_modules": true
+    },
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    //Git
+    "git.ignoreMissingGitWarning": true,
+    //GitLens
+    "gitlens.advanced.messages": {
+        "suppressGitMissingWarning": true,
+        "suppressLineUncommittedWarning": true
+    },
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.defaultDateFormat": null,
+    "gitlens.defaultDateShortFormat": null,
+    "gitlens.defaultTimeFormat": null,
+    // Project Manager
+    "projectManager.git.baseFolders": [
+        "$home/workspace"
+    ],
+    "projectManager.sortList": "Recent",
+    // Security
+    "security.workspace.trust.untrustedFiles": "open",
+    // SortJSON
+    "sortJSON.orderOverride": [
+        "name",
+        "version",
+        "main",
+        "module",
+        "types",
+        "typings",
+        "files",
+        "publishConfig",
+        "repository",
+        "scripts",
+        "prefix",
+        "description",
+        "body"
+    ],
+    "sortJSON.orderUnderride": [
+        "resolutions",
+        "dependencies",
+        "devDependencies",
+        "peerDependencies",
+        "cSpell.userWords"
+    ],
+    // Typescript
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    //Updates
+    "update.showReleaseNotes": false,
+    "vim.foldfix": false,
+    "vim.highlightedyank.color": "rgba(250, 240, 170, 0.5)",
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.textColor": "white",
+    "vim.hlsearch": true,
+    // Vim
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "leader",
+                "r"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "w"
+            ],
+            "commands": [
+                ":w!"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "q"
+            ],
+            "commands": [
+                ":q!"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "x"
+            ],
+            "commands": [
+                ":x!"
+            ]
+        },
+        {
+            "after": [
+                "g",
+                "g",
+                "V",
+                "G"
+            ],
+            "before": [
+                "<c-a>"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "k"
+            ],
+            "commands": [
+                "editor.action.showHover"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "d"
+            ],
+            "commands": [
+                "editor.action.marker.prev"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "d"
+            ],
+            "commands": [
+                "editor.action.marker.next"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "c",
+                "a"
+            ],
+            "commands": [
+                "editor.action.quickFix"
+            ]
+        },
+        {
+            "after": [
+                "^"
+            ],
+            "before": [
+                "H"
+            ]
+        },
+        {
+            "after": [
+                "$"
+            ],
+            "before": [
+                "L"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "i"
+            ],
+            "commands": [
+                "extension.toggleBool"
+            ]
+        }
+    ],
+    "vim.useSystemClipboard": true,
+    //Windows
+    "window.commandCenter": false,
+    "window.titleBarStyle": "native",
+    "workbench.activityBar.location": "hidden",
+    // Workbench
+    "workbench.colorTheme": "Min Dark",
+    "workbench.iconTheme": "moxer-icons",
+    "workbench.layoutControl.enabled": false,
+    "workbench.startupEditor": "none",
+    "cSpell.userWords": [
+        "automations",
+        "bootcamp",
+        "chakra",
+        "checkin",
+        "checkins",
+        "cloudflare",
+        "clsx",
+        "Codegen",
+        "datadog",
+        "Datetime",
+        "dayjs",
+        "Dotenv",
+        "Elysia",
+        "esbuild",
+        "fastify",
+        "Fastify",
+        "feedbackwidget",
+        "ffprobe",
+        "gamificada",
+        "Hasher",
+        "hono",
+        "Hono",
+        "ilike",
+        "IUGU",
+        "jamjuree",
+        "jupiter",
+        "ksuid",
+        "liveblocks",
+        "LIVEBLOCKS",
+        "Marguerita",
+        "middlewares",
+        "mixpanel",
+        "monaco",
+        "nestjs",
+        "nivo",
+        "omni",
+        "Omni",
+        "Onboarded",
+        "pallas",
+        "postgres",
+        "postgresql",
+        "prefetch",
+        "reactflow",
+        "retriable",
+        "roboto",
+        "rocketseat",
+        "rotion",
+        "rsxp",
+        "Sandpack",
+        "shiki",
+        "skylab",
+        "sqlite",
+        "supergraph",
+        "svgr",
+        "sympla",
+        "tailwindcss",
+        "textblock",
+        "tiptap",
+        "trpc",
+        "TRPC",
+        "tsup",
+        "unfollow",
+        "Unfollow",
+        "unform",
+        "Unform",
+        "unmark",
+        "upsert",
+        "Usuario",
+        "webm",
+        "WEBPUSH"
+    ]
+}
