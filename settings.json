@@ -3,14 +3,17 @@
     "window.commandCenter": false,
     "workbench.activityBar.location": "hidden",
     // Security
-    "security.workspace.trust.untrustedFiles": "open",
+    "security.workspace.trust.untrustedFiles": "newWindow",
+    "security.promptForLocalFileProtocolHandling": false,
     // Workbench
     "workbench.colorTheme": "Min Dark",
     "workbench.iconTheme": "moxer-icons",
     "workbench.layoutControl.enabled": false,
     "workbench.startupEditor": "none",
     // Editor
+    "breadcrumbs.enabled": false,
     "editor.fontFamily": "JetBrains Mono",
+    "editor.bracketPairColorization.enabled": true,
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
     "editor.fontWeight": "400",
@@ -24,6 +27,13 @@
         "source.addMissingImports": "explicit",
         "source.organizeImports": "explicit"
     },
+    // Terminal
+    // "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontWeight": "400",
+    "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.defaultProfile.osx": "/bin/zsh",
+    "terminal.integrated.showExitAlert": false,
     //Updates
     "update.showReleaseNotes": false,
     // Explorer
@@ -41,40 +51,37 @@
         ".vscode": true
         // "node_modules": true
     },
-    // Extension
-    "extensions.autoUpdate": "onlyEnabledExtensions",
-    "extensions.ignoreRecommendations": true,
+    "explorer.fileNesting.patterns": {
+        "package.json": ".eslint*, prettier*, tsconfig*, vite*, pnpm-*, bun.lockb, nest*, package-lock*",
+        "tailwind.config.*": "tailwind.config*, postcss.config*",
+        ".env.local": ".env*",
+        ".env": ".env*"
+    },
     // Git
     "git.autofetch": true,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "git.ignoreMissingGitWarning": true,
+    // Extensions
+    "extensions.autoUpdate": "onlyEnabledExtensions",
+    "extensions.ignoreRecommendations": true,
     // GitLens
     "gitlens.advanced.messages": {
-        "suppressGitMissingWarning": true,
-        "suppressLineUncommittedWarning": true
+        "suppressIntegrationRequestTimedOutWarning": true
     },
     "gitlens.codeLens.authors.enabled": false,
-    "gitlens.defaultDateFormat": null,
-    "gitlens.defaultDateShortFormat": null,
-    "gitlens.defaultTimeFormat": null,
-    // Project Manager
-    "projectManager.git.baseFolders": [
-        "$home/workspace"
-    ],
-    "projectManager.sortList": "Recent",
+    // Auto Imports
+    "javascript.suggest.autoImports": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.suggest.autoImports": true,
+    "typescript.preferences.preferTypeOnlyAutoImports": true,
     // Eslint
     "eslint.validate": [
         "javascript",
         "javascriptreact",
         "graphql"
     ],
-    // Turbo Console Log
-    "turboConsoleLog.delimiterInsideMessage": "",
-    "turboConsoleLog.logMessagePrefix": "",
-    "turboConsoleLog.insertEnclosingFunction": false,
-    "turboConsoleLog.insertEnclosingClass": false,
-    // Prettier
+    // Prettier and Formatters
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -87,7 +94,14 @@
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    // Code Spell
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    // CodeSpell
+    "cSpell.language": "en,pt",
     "cSpell.enableFiletypes": [
         "!asciidoc",
         "!c",
@@ -107,76 +121,143 @@
         "!scala",
         "!scss"
     ],
-    "cSpell.userWords": [
-        "automations",
-        "bootcamp",
-        "chakra",
-        "checkin",
-        "checkins",
-        "cloudflare",
-        "clsx",
-        "Codegen",
-        "datadog",
-        "Datetime",
-        "dayjs",
-        "Dotenv",
-        "Elysia",
-        "esbuild",
-        "fastify",
-        "Fastify",
-        "feedbackwidget",
-        "ffprobe",
-        "gamificada",
-        "Hasher",
-        "hono",
-        "Hono",
-        "ilike",
-        "IUGU",
-        "jamjuree",
-        "jupiter",
-        "ksuid",
-        "liveblocks",
-        "LIVEBLOCKS",
-        "Marguerita",
-        "middlewares",
-        "mixpanel",
-        "monaco",
-        "nestjs",
-        "nivo",
-        "omni",
-        "Omni",
-        "Onboarded",
-        "pallas",
-        "postgres",
-        "postgresql",
-        "prefetch",
-        "reactflow",
-        "retriable",
-        "roboto",
-        "rocketseat",
-        "rotion",
-        "rsxp",
-        "Sandpack",
-        "shiki",
-        "skylab",
-        "sqlite",
-        "supergraph",
-        "svgr",
-        "sympla",
-        "tailwindcss",
-        "textblock",
-        "tiptap",
-        "trpc",
-        "TRPC",
-        "tsup",
-        "unfollow",
-        "Unfollow",
-        "unform",
-        "Unform",
-        "unmark",
-        "upsert",
-        "Usuario",
-        "webm",
-        "WEBPUSH"
+    // Live Server
+    "liveServer.settings.donotShowInfoMsg": true,
+    // Turbo Console Log
+    "turboConsoleLog.delimiterInsideMessage": "",
+    "turboConsoleLog.logMessagePrefix": "",
+    "turboConsoleLog.logMessageSuffix": "",
+    "turboConsoleLog.insertEnclosingClass": false,
+    "turboConsoleLog.insertEnclosingFunction": false,
+}{
+    //Windows
+    "window.commandCenter": false,
+    "workbench.activityBar.location": "hidden",
+    // Security
+    "security.workspace.trust.untrustedFiles": "newWindow",
+    "security.promptForLocalFileProtocolHandling": false,
+    // Workbench
+    "workbench.colorTheme": "Min Dark",
+    "workbench.iconTheme": "moxer-icons",
+    "workbench.layoutControl.enabled": false,
+    "workbench.startupEditor": "none",
+    // Editor
+    "breadcrumbs.enabled": false,
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.fontWeight": "400",
+    "editor.lineHeight": 22,
+    "editor.lineNumbers": "relative",
+    "editor.linkedEditing": true,
+    "editor.minimap.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "editor.suggest.insertMode": "replace",
+    "editor.codeActionsOnSave": {
+        "source.addMissingImports": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    // Terminal
+    // "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontWeight": "400",
+    "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.defaultProfile.osx": "/bin/zsh",
+    "terminal.integrated.showExitAlert": false,
+    //Updates
+    "update.showReleaseNotes": false,
+    // Explorer
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.fileNesting.enabled": true,
+    //Files
+    "files.exclude": {
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.hg": true,
+        "**/.svn": true,
+        "**/CVS": true,
+        ".vscode": true
+        // "node_modules": true
+    },
+    "explorer.fileNesting.patterns": {
+        "package.json": ".eslint*, prettier*, tsconfig*, vite*, pnpm-*, bun.lockb, nest*, package-lock*",
+        "tailwind.config.*": "tailwind.config*, postcss.config*",
+        ".env.local": ".env*",
+        ".env": ".env*"
+    },
+    // Git
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "git.ignoreMissingGitWarning": true,
+    // Extensions
+    "extensions.autoUpdate": "onlyEnabledExtensions",
+    "extensions.ignoreRecommendations": true,
+    // GitLens
+    "gitlens.advanced.messages": {
+        "suppressIntegrationRequestTimedOutWarning": true
+    },
+    "gitlens.codeLens.authors.enabled": false,
+    // Auto Imports
+    "javascript.suggest.autoImports": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.suggest.autoImports": true,
+    "typescript.preferences.preferTypeOnlyAutoImports": true,
+    // Eslint
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "graphql"
     ],
+    // Prettier and Formatters
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[prisma]": {
+        "editor.defaultFormatter": "Prisma.prisma"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    // CodeSpell
+    "cSpell.language": "en,pt",
+    "cSpell.enableFiletypes": [
+        "!asciidoc",
+        "!c",
+        "!cpp",
+        "!csharp",
+        "!go",
+        "!handlebars",
+        "!haskell",
+        "!jade",
+        "!java",
+        "!latex",
+        "!php",
+        "!pug",
+        "!python",
+        "!restructuredtext",
+        "!rust",
+        "!scala",
+        "!scss"
+    ],
+    // Live Server
+    "liveServer.settings.donotShowInfoMsg": true,
+    // Turbo Console Log
+    "turboConsoleLog.delimiterInsideMessage": "",
+    "turboConsoleLog.logMessagePrefix": "",
+    "turboConsoleLog.logMessageSuffix": "",
+    "turboConsoleLog.insertEnclosingClass": false,
+    "turboConsoleLog.insertEnclosingFunction": false,
 }
